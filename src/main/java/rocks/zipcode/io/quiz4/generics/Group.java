@@ -10,6 +10,11 @@ public class Group<_ extends Object> implements GroupInterface{
 
     protected ArrayList<_> list = new ArrayList<>();
     public Group() {}
+    public Group(_... elements) {
+        for(_ e : elements) {
+            list.add(e);
+        }
+    }
 
     public Integer count() {
         return list.size();

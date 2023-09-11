@@ -10,6 +10,11 @@ import java.util.List;
  * @author leon on 18/12/2018.
  */
 public class SortedGroup<_ extends Comparable> extends Group<_> {
+    public SortedGroup(_... elements){
+        for (_ e : elements) {
+            list.add(e);
+        }
+    }
 
     @Override
     public void insert(Object value) {
@@ -24,11 +29,6 @@ public class SortedGroup<_ extends Comparable> extends Group<_> {
     }
 
     public Integer indexOf(_ value) {
-//        Iterator<_> sorted = list.iterator();
-//        List<_> sortedList = new ArrayList<>();
-//        sorted.forEachRemaining(sortedList::add);
-//        Collections.sort(sortedList);
-//        return sortedList.indexOf(value);
         return list.indexOf(value);
     }
 
