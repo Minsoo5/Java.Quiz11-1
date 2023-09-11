@@ -8,7 +8,7 @@ import java.util.Iterator;
  */
 public class Group<_ extends Object> implements GroupInterface{
 
-    private ArrayList<_> list = new ArrayList<>();
+    protected ArrayList<_> list = new ArrayList<>();
     public Group() {}
 
     public Integer count() {
