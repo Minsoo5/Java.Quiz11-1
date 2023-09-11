@@ -40,6 +40,16 @@ public class Group<_ extends Object> implements GroupInterface{
     }
 
     public Iterator<_> iterator() {
-        return null;
+        Iterator<_> ans = list.iterator();
+        return ans;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        list.stream().forEach(e -> sb.append(e.toString()).append(", "));
+        sb.replace(sb.length()-2, sb.length()-1, "]");
+        sb.replace(sb.length()-1, sb.length(), "");
+        return sb.toString();
     }
 }
